@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<audio id="bg_music" loop>
+    <source src="{{ url_for('static', filename='musica.mp3') }}" type="audio/mpeg">
+</audio>
+
+<button id="sound_button" onclick="toggleMusic()" title="Tocar / Pausar Música">
+    🔊
+</button>
+
+<div class="room">
+    <h2 id="room_name">Sala Inicial</h2>
+    <p id="room_desc">Você está em uma sala iluminada por uma lâmpada antiga. Há uma porta ao norte.</p>
+</div>
+
+<p class="message" id="message"></p>
+
+<input type="text" id="cmd_input" placeholder="Digite um comando">
+<button onclick="enviarComando()">Enviar</button>
+
+<div class="inventory">
+    <h3>Inventário:</h3>
+    <ul id="inventory_list"><li>Vazio</li></ul>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
